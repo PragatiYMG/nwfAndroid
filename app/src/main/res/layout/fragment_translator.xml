@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/box_bg"
+            android:padding="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/tfLangMainFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tfLanguageFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_18sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="English"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_up"
+                            app:tint="@color/gray_text" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:rotation="180"
+                            android:layout_marginTop="-8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_up"
+                            app:tint="@color/gray_text" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_weight="1" />
+
+
+                <ImageView
+                    android:id="@+id/tfSpeakNow"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@android:drawable/ic_btn_speak_now" />
+
+                <ImageView
+                    android:id="@+id/tfCopyOne"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:src="@drawable/ic_copy" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/tfEditOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_bg"
+                android:minLines="8"
+                android:maxLines="8"
+                android:hint="@string/type_here"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="start"
+                android:padding="@dimen/_12sdp"
+                android:inputType="textMultiLine"
+                android:layout_marginVertical="@dimen/_6sdp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tfChange"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_suffle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_bg"
+            android:padding="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/tfLangMainTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gray_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tfLanguageTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:paddingStart="@dimen/_18sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="English"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_up"
+                            app:tint="@color/gray_text" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:rotation="180"
+                            android:layout_marginTop="-8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_up"
+                            app:tint="@color/gray_text" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_weight="1" />
+
+
+                <ImageView
+                    android:id="@+id/tfVoice"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_voice" />
+
+                <ImageView
+                    android:id="@+id/tfCopyTwo"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:src="@drawable/ic_copy" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tfTranslate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:minLines="8"
+                android:maxLines="8"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="start"
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_6sdp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/light_gray"
+    android:layout_margin="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rcoQues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="none"
+            android:textColor="@color/black_text"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"/>
+
+        <EditText
+            android:id="@+id/rcoAns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type Here..."
+            android:visibility="gone"
+            android:minLines="2"
+            android:maxLines="4"
+            android:inputType="textMultiLine"
+            style="@style/EditTextCustomStyle"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcoOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+</LinearLayout>

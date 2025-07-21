@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.ImportantContact">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ficRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/ficMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_data_found"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins_light"
+        android:textStyle="bold"
+        android:textSize="@dimen/_11ssp"
+        android:gravity="center"
+        android:textColor="@color/gray_text"/>
+
+</LinearLayout>

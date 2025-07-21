@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.Dashboard">
+
+        <LinearLayout
+            android:id="@+id/fvRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@color/gray_box">
+
+                <ImageView
+                    android:id="@+id/fvBanner"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/fvTitleTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:elevation="@dimen/_1sdp"
+                    android:textSize="@dimen/_16ssp"
+                    android:paddingHorizontal="@dimen/_24sdp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:backgroundTint="@color/black"
+                android:background="@null">
+
+                <EditText
+                    android:id="@+id/fvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_28sdp"
+                    android:hint="@string/type_here"
+                    android:textColorHint="#AAAAAA"
+                    style="@style/EditTextCustomStyle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_search"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/fvSearch"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@null"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fvRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/fvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data_found"
+                android:visibility="gone"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
+                android:textSize="@dimen/_11ssp"
+                android:gravity="center"
+                android:textColor="@color/gray_text"/>
+
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/full_screen_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

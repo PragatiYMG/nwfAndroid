@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_6sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp">
+
+            <ImageView
+                android:id="@+id/rhImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/rhName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/rcoKnowMore"
+            style="@style/CustomButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_28sdp"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:text="Know More"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_8ssp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

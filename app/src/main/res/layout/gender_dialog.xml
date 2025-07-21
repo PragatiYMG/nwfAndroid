@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gdMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/male"
+            android:gravity="center"
+            android:textColor="@color/purple_700"
+            android:fontFamily="@font/poppins_semi_bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/gdFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/female"
+            android:gravity="center"
+            android:textColor="@color/purple_700"
+            android:fontFamily="@font/poppins_semi_bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/gdOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/other"
+            android:gravity="center"
+            android:textColor="@color/purple_700"
+            android:fontFamily="@font/poppins_semi_bold"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
