@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.webkit.*
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.app.nwf.databinding.ActivityVimeoIframeBinding
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
@@ -15,9 +18,16 @@ class VimeoIframe : AppCompatActivity() {
 
     private lateinit var binding: ActivityVimeoIframeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityVimeoIframeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.viRoot) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+            insets
+        }
 
 //        window.decorView.systemUiVisibility = (
 //                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
@@ -44,7 +54,7 @@ class VimeoIframe : AppCompatActivity() {
 
         lifecycle.addObserver(binding.playerView)
 
-        val iFramePlayerOptions = IFramePlayerOptions.Builder()
+        val iFramePlayerOptions = IFramePlayerOptions.Builder(this@VimeoIframe)
             .controls(1)
             .rel(0)
             .fullscreen(1) // enable full screen button

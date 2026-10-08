@@ -1,11 +1,14 @@
 package com.app.nwf.ui
 
 import android.content.Intent
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.TranslateAnimation
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.app.nwf.databinding.ActivitySplashBinding
 import com.app.nwf.utils.BaseUtils
 import com.bumptech.glide.Glide
@@ -15,9 +18,16 @@ class SplashScreen : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         animateImage()
         Handler(Looper.getMainLooper()).postDelayed({

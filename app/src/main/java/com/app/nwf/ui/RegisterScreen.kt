@@ -13,6 +13,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.app.nwf.R
 import com.app.nwf.databinding.RegisterScreenBinding
 import java.text.SimpleDateFormat
@@ -29,9 +32,16 @@ class RegisterScreen : AppCompatActivity(), OnClickListener {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = RegisterScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         initView()
     }
